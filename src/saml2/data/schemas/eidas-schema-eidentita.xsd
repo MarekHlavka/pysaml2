@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://schemas.eidentita.cz/moris/2016/identity/claims/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://schemas.eidentita.cz/moris/2016/identity/claims/"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified"
+  version="1">
+  <xsd:attribute name="LatinScript" type="xsd:boolean" default="true"/>
+  <!-- PhoneNumber -->
+  <xsd:simpleType name="PhoneNumberType">
+    <xsd:annotation>
+      <xsd:documentation>Phone number of the natural person.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <!-- IdType -->
+  <xsd:simpleType name="IdTypeType">
+    <xsd:annotation>
+      <xsd:documentation>Type of electronic documents of the natural person.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <!-- IdNumber -->
+  <xsd:simpleType name="IdNumberType">
+    <xsd:annotation>
+      <xsd:documentation>Number of electronic documents of the natural person.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <!-- TRadresaID-->
+  <xsd:complexType name="TRadresaIDType">
+    <xsd:annotation>
+      <xsd:documentation>Current Address of the natural person.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="okresKod" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="obecKod" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="castObceKod" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="uliceKod" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="postaKod" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="stavebniObjektKod" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="adresniMistoKod" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="cisloDomovni" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="cisloOrientacni" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="cisloOrientacniPismeno" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- FullIds -->
+  <!-- Maybe add full decoded verison in separate schema -->
+  <xsd:simpleType name="FullIdsType">
+    <xsd:annotation>
+      <xsd:documentation>IDs of the natural person as base64 encoded string.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+</xsd:schema>

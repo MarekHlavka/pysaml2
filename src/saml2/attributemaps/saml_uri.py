@@ -28,6 +28,12 @@ SWISSEDUPERSON_OID = "urn:oid:2.16.756.1.2.5.1.1."
 EIDAS_NATURALPERSON = "http://eidas.europa.eu/attributes/naturalperson/"
 EIDAS_LEGALPERSON = "http://eidas.europa.eu/attributes/legalperson/"
 
+SCHEMAS_EIDENTITA = "http://schemas.eidentita.cz/moris/2016/identity/claims/"
+
+STORK_CLAIMS = "http://www.stork.gov.eu/1.0/"
+
+EIDAS_LOA = "http://eidas.europa.eu/"
+
 # SAML subject id specification
 # https://docs.oasis-open.org/security/saml-subject-id-attr/v1.0/cs01/saml-subject-id-attr-v1.0-cs01.html
 SAML_SUBJECT_ID = "urn:oasis:names:tc:SAML:attribute:"
@@ -85,6 +91,20 @@ MAP = {
         f"{EIDAS_NATURALPERSON}PlaceOfBirth": "PlaceOfBirth",
         f"{EIDAS_NATURALPERSON}CurrentAddress": "CurrentAddress",
         f"{EIDAS_NATURALPERSON}Gender": "Gender",
+
+        f"{SCHEMAS_EIDENTITA}PhoneNumber": "PhoneNumber",
+        f"{SCHEMAS_EIDENTITA}IdType": "IdType",
+        f"{SCHEMAS_EIDENTITA}IdNumber": "IdNumber",
+        f"{SCHEMAS_EIDENTITA}TRadresaID": "TRadresaID",
+        f"{SCHEMAS_EIDENTITA}FullIds": "FullIds",
+
+        f"{STORK_CLAIMS}CountryCodeOfBirth": "CountryCodeOfBirth",
+        f"{STORK_CLAIMS}Email": "Email",
+        f"{STORK_CLAIMS}Age": "Age",
+        f"{STORK_CLAIMS}IsAgeOver": "IsAgeOver",
+
+        f"{EIDAS_LOA}LoA": "LoA",
+
         f"{EDUCOURSE_OID}1": "eduCourseOffering",
         f"{EDUCOURSE_OID}2": "eduCourseMember",
         f"{EDUMEMBER1_OID}1": "isMemberOf",
@@ -290,6 +310,20 @@ MAP = {
         "PlaceOfBirth": f"{EIDAS_NATURALPERSON}PlaceOfBirth",
         "CurrentAddress": f"{EIDAS_NATURALPERSON}CurrentAddress",
         "Gender": f"{EIDAS_NATURALPERSON}Gender",
+        
+        "PhoneNumber": f"{SCHEMAS_EIDENTITA}PhoneNumber",
+        "IdType": f"{SCHEMAS_EIDENTITA}IdType",
+        "IdNumber": f"{SCHEMAS_EIDENTITA}IdNumber",
+        "TRadresaID": f"{SCHEMAS_EIDENTITA}TRadresaID",
+        "FullIds": f"{SCHEMAS_EIDENTITA}FullIds",
+
+        "CountryCodeOfBirth": f"{STORK_CLAIMS}CountryCodeOfBirth",
+        "Email": f"{STORK_CLAIMS}Email",
+        "Age": f"{STORK_CLAIMS}Age",
+        "IsAgeOver": f"{STORK_CLAIMS}IsAgeOver",
+
+        "LoA": f"{EIDAS_LOA}LoA",
+
         "associatedDomain": f"{UCL_DIR_PILOT}37",
         "authContextParams": f"{DIGG_OID}3",
         "authorityRevocationList": f"{X500ATTR_OID}38",

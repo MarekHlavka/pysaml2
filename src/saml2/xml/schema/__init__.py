@@ -33,6 +33,9 @@ def _create_xml_schema_validator(source=None, **kwargs):
         schema_resources.joinpath("eidas-schema-attribute-naturalperson.xsd")
     )
     path_schema_eidas_attribute_legalperson = str(schema_resources.joinpath("eidas-schema-attribute-legalperson.xsd"))
+    path_schema_eidas_eidentita = str(schema_resources.joinpath("eidas-schema-eidentita.xsd"))
+    path_schema_eidas_LoA = str(schema_resources.joinpath("eidas-schema-LoA.xsd"))
+    path_schema_stork = str(schema_resources.joinpath("saml-schema-stork-1.0.xsd"))
 
     source = source if source else path_schema_saml_protocol
     locations = {
@@ -47,6 +50,9 @@ def _create_xml_schema_validator(source=None, **kwargs):
         "http://eidas.europa.eu/saml-extensions": path_schema_eidas_saml_extensions,
         "http://eidas.europa.eu/attributes/naturalperson": path_schema_eidas_attribute_naturalperson,
         "http://eidas.europa.eu/attributes/legalperson": path_schema_eidas_attribute_legalperson,
+        "http://schemas.eidentita.cz/moris/2016/identity/claims/": path_schema_eidas_eidentita,
+        "http://eidas.europa.eu/": path_schema_eidas_LoA,
+        "http://www.stork.gov.eu/1.0/": path_schema_stork,
     }
 
     kwargs = {

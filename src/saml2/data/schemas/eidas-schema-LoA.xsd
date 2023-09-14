@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://eidas.europa.eu/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://eidas.europa.eu/"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified"
+  version="1">
+  <xsd:attribute name="LatinScript" type="xsd:boolean" default="true"/>
+  
+   <!-- Loa -->
+  <xsd:simpleType name="LoAType">
+    <xsd:annotation>
+      <xsd:documentation>Level of assurance of the natural person.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  
+</xsd:schema>
